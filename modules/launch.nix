@@ -161,7 +161,7 @@ let
       (bind "/var")
       (bind "/tmp")
       (bind "/run")
-      "--ro-bind-try ${config.flatpak.infoFile or "/.flatpak-info-not-found"} /.flatpak-info"
+      "--ro-bind ${config.flatpak.infoFile} /.flatpak-info"
     ])} ${pkgs.xdg-dbus-proxy}/bin/xdg-dbus-proxy "$@"
   '';
 in {
